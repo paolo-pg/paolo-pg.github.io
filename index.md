@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Basic Progressive Web App manual
 
 You can use the [editor on GitHub](https://github.com/paolo-pg/paolo-pg.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 

@@ -1,6 +1,5 @@
 ## Progressive Web Apps and building your own.
-
-A progressive web app (PWA) is a (mobile) website, acting like a native app. It can be installed on your device and works offline even if you don't have an internet connection. 
+A progressive web app (PWA) is a (mobile) website, acting like a native app. It can be installed on your device and works offline even if you don't have an internet connection. This manual is part of [this](https://github.com/paolo-pg/progressive-web-app-basic) Github project.
 
 #### Pros
 - No app store needed, installable by just clicking on add to home screen
@@ -121,9 +120,9 @@ By following all the previous steps your PWA should be about 90% ready. It's not
 
 The next step is running Google Lighthouse. Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, and more. You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module.
 
-![Image](https://i334115.hera.fhict.nl/images/lighthouse.png)
+![Image](https://i334115.hera.fhict.nl/images/lighthouse2.png)
 
-### Usefull links
+### Useful links
 - [PWA stats](https://www.pwastats.com/?utm_source=syndicate&utm_medium=post&utm_campaign=scotch-jun172510)
 - [PWA Gallery](https://outweb.io/)
 - [Another PWA Gallery](https://pwa.rocks/?utm_source=syndicate&utm_medium=post&utm_campaign=scotch-jun172510)

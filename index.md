@@ -20,7 +20,8 @@ To turn your website into a PWA you need to do the following:
 1. Get your work directory ready
 2. Add a serviceworker.js
 3. Add a web app manifest
-3. Force HTTPS
+4. Force HTTPS
+5. Lighthouse
 
 There are several ways to build a working PWA. For example by building a PWA using [React](https://reactjs.org/), [Angular](https://angular.io/) or other framweworks. This manual has been build by using just HTML, CSS and Javascript. This manual will give you a fast start building your own verified PWA.
 
@@ -66,19 +67,65 @@ toolbox.router.get('/', toolbox.fastest);
 ```
 
 ### Step three: Web app manifest
+Another important step to make your website more app-like is adding a manifest. A web app manifest is a json file that provides information about the app. It gives you the ability to control how your web app appears on devices, gives the app a icon, adds a loading icon and it adds default display characterstics to the browser.
 
+Create a file manifest.json and add it to the root of your directory. Add this to manifest.json:
+```markdown
+{
+  "name": "Name of your app",
+  "short_name": "Shortname",
+  "icons": [
+  {
+    "src": "images/icons/icon-192x192.png",  
+      "sizes": "192x192",  
+      "type": "image/png"  
+    },  
+    {  
+      "src": "images/icons/icon-256x256.png",  
+      "sizes": "256x256",  
+      "type": "image/png"  
+    },  
+    {  
+      "src": "images/icons/icon-384x384.png",  
+      "sizes": "384x384",  
+      "type": "image/png"  
+    },  
+    {  
+      "src": "images/icons/icon-512x512.png",  
+      "sizes": "512x512",  
+      "type": "image/png"  
+    }
+    ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF"
+}
+```
+When a user adds your site to their home screen, you can define a set of icons for the browser to use. You can define them with a type and size. Build your own icons using the default sizes, add them to your directory and edit the manifest.json to match the location of the icons.
 
+```markdown
+  "src": "images/icons/icon-512x512.png",  
+  "sizes": "512x512",  
+  "type": "image/png"  
+```
+Next tell your browser about the manifest by adding a link tag in the head section of your index file.
+```markdown
+<link rel="manifest" href="manifest.json">
+```
+### Step four: HTTPS
+Progressive web apps require a secure HTTPS connection instead of the unsecure HTTP. HTTPS helps prevent intruders from tampering with the communications between your websites and your users’ browsers. How you force HTTPS depends on your workflow, webserver and domain. Use [this](https://www.smashingmagazine.com/2017/06/guide-switching-http-https/) guide to use HTTPS.
 
+### Lighthouse
+By following all the previous steps your PWA should be about 90% ready. It's not bad if there are several errors or your website is not fully functioning as a web app. Make sure you check your web app for errors using Chrome's Devtools.
 
+The next step is running Google Lighthouse. Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps, and more. You can run Lighthouse in Chrome DevTools, from the command line, or as a Node module.
+
+![Image](https://i334115.hera.fhict.nl/images/lighthouse.png)
 
 ### Usefull links
-[PWA stats](https://www.pwastats.com/?utm_source=syndicate&utm_medium=post&utm_campaign=scotch-jun172510)
-[PWA Gallery](https://outweb.io/)
-[Another PWA Gallery](https://pwa.rocks/?utm_source=syndicate&utm_medium=post&utm_campaign=scotch-jun172510)
-[PWA generator](http://preview.pwabuilder.com/generator)
-
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- [PWA stats](https://www.pwastats.com/?utm_source=syndicate&utm_medium=post&utm_campaign=scotch-jun172510)
+- [PWA Gallery](https://outweb.io/)
+- [Another PWA Gallery](https://pwa.rocks/?utm_source=syndicate&utm_medium=post&utm_campaign=scotch-jun172510)
+- [PWA generator](http://preview.pwabuilder.com/generator)
 
